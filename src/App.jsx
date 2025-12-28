@@ -68,7 +68,7 @@ function App() {
                     </div>
                 ))}
             </div>
-            <h4>Note : Your notes are pubic so don't share any personal info </h4>
+            <h4>Note : Your notes are public here so don't share any personal info </h4>
         </div>
     );
 }
