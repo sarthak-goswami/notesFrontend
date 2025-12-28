@@ -1,0 +1,136 @@
+/* RESET + GLOBAL */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #121212;
+    color: #eaeaea;
+    font-family: "Inter", system-ui, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* APP CONTAINER */
+.app {
+    width: 100%;
+    max-width: 600px;
+    padding: 16px;
+}
+
+.app h4{
+    align-self: center;
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+/* FORM */
+.note-form {
+    background: #1e1e1e;
+    padding: 16px;
+    border-radius: 14px;
+    margin-bottom: 24px;
+}
+
+.note-form input,
+.note-form textarea {
+    width: 100%;
+    background: #2a2a2a;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
+.note-form textarea {
+    resize: none;
+}
+
+.note-form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: #4f46e5;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.note-form button:active {
+    transform: scale(0.98);
+}
+
+/* NOTES LIST */
+.notes {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* NOTE CARD */
+.note {
+    background: #1e1e1e;
+    padding: 14px;
+    border-radius: 14px;
+    border: 1px solid #2a2a2a;
+}
+
+.note h3 {
+    margin: 0 0 6px;
+    font-size: 1.1rem;
+}
+
+.note p {
+    margin: 0 0 10px;
+    font-size: 0.95rem;
+    color: #cfcfcf;
+    line-height: 1.4;
+}
+
+/* DELETE BUTTON */
+.note button {
+    width: 100%;
+    background: #dc2626;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.note button:active {
+    transform: scale(0.97);
+}
+
+/* DESKTOP ENHANCEMENTS */
+@media (min-width: 768px) {
+    .app {
+        padding: 24px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .note button {
+        width: auto;
+        padding: 6px 14px;
+    }
+}
