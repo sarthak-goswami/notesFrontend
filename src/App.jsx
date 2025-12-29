@@ -9,9 +9,11 @@ function App() {
     const [content, setContent] = useState("");
 
     const fetchNotes = async () => {
+        console.time("Fetchdata");
         const res = await fetch(`${API_URL}/api/notes`);
         const data = await res.json();
         setNotes(data);
+        console.timeEnd("Fetchdata");
     };
 
     useEffect(() => {
