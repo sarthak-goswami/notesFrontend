@@ -30,12 +30,19 @@ The UI is mobile-friendly and optimized for both desktop and phone screens.
 ## 📂 Project Structure
 
 frontend/
+
 ├── src/
+
 │ ├── App.jsx
+
 │ ├── App.css
+
 │ └── main.jsx
+
 ├── index.html
+
 ├── package.json
+
 └── README.md
 
 ## Link for the website : https://notesapp-ten-flame.vercel.app/
