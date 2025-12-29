@@ -4,18 +4,27 @@ import "./app.css";
 const API_URL = "https://notesbackend-xpks.onrender.com";
 
 function App() {
+    const [loading,setLoading] = useState(true);
     const [notes, setNotes] = useState([]);
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
 
     const fetchNotes = async () => {
-        console.time("Fetchdata");
-        const res = await fetch(`${API_URL}/api/notes`);
-        const data = await res.json();
-        setNotes(data);
-        console.timeEnd("Fetchdata");
+        try {
+            console.time("Fetchdata");
+            const res = await fetch(`${API_URL}/api/notes`);
+            const data = await res.json();
+            setNotes(data);
+            console.timeEnd("Fetchdata");
+        } catch (error) {
+            console.log(error)
+        }
+        finally{
+            setLoading(false)
+        }
     };
 
+    
     useEffect(() => {
         fetchNotes();
     }, []);
@@ -39,6 +48,12 @@ function App() {
         await fetch(`${API_URL}/api/notes/${id}`, { method: "DELETE" });
         fetchNotes();
     };
+
+    if(loading){
+        return (
+            <><h1>Loading...</h1></>
+        )
+    }
 
     return (
         <div className="app">
